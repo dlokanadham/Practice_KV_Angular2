@@ -13,6 +13,7 @@ var EmployeeComponenet = /** @class */ (function () {
         this.lastName = 'Dasamukha';
         this.gender = 'Male';
         this.age = '30';
+        this.columnSpan = 2;
     }
     EmployeeComponenet = __decorate([
         core_1.Component({

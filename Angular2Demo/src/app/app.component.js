@@ -9,20 +9,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.pageHeader = "Employee Details";
-        this.firstName = "Lokanadham";
-        this.lastName = "Dasamukha";
-        this.imgPath = "Images/Logo.JPG";
-        this.isDisabled = false;
-        this.badHtml = "Hello <scrpt>alert('Hacked');</script> world";
     }
-    AppComponent.prototype.getFullName = function () {
-        return this.firstName + " " + this.lastName;
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<div><h1>{{getFullName()}}</h1>\n                <img src='http://www.pragimtech.com/{{imgPath}}'/>\n                <employee-app></employee-app>\n                <button [disabled]='isDisabled'>View More</button>\n                <span bind-innerHtml='pageHeader'></span>\n                <div>{{badHtml}}</div>\n                </div>"
+            template: "<div>\n                <employee-app></employee-app>\n                </div>"
         })
     ], AppComponent);
     return AppComponent;

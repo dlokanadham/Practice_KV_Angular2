@@ -10,4 +10,6 @@ export class EmployeeComponenet {
     lastName: string = 'Dasamukha';
     gender: string = 'Male';
     age: string = '30';
+
+    columnSpan : number =2;
 }
