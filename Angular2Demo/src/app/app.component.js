@@ -9,11 +9,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
+        this.classesToApply = 'boldClass italicClass';
+        this.applyBoldClass = true;
+        this.applyItalicClass = true;
     }
+    AppComponent.prototype.addClasses = function () {
+        var classes = {
+            boldClass: this.applyBoldClass,
+            italicClass: this.applyItalicClass
+        };
+        return classes;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<div>\n                <employee-app></employee-app>\n                </div>"
+            template: "<button class=\"colorClass\" [class]='classesToApply'>Click Me</button>\n                <br/><br/>\n                <button class=\"colorClass\" [class.boldClass]='applyBoldClass'>Click Me</button>\n                <br/><br/>\n                <button class=\"colorClass\" [ngClass]='addClasses()'>Click Me</button>\n            "
         })
     ], AppComponent);
     return AppComponent;
