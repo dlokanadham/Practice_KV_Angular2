@@ -9,23 +9,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.isBold = true;
-        this.fontSize = 30;
-        this.isItalic = true;
     }
-    AppComponent.prototype.getStyles = function () {
-        var styles = {
-            'font-size.px': this.fontSize,
-            'font-weight': this.isBold ? 'bold' : 'normal',
-            'font-style': this.isItalic ? 'italic' : 'normal'
-        };
-        return styles;
+    AppComponent.prototype.onClick1 = function () {
+        console.log('Button1 Clicked');
     };
-    ;
+    AppComponent.prototype.onClick2 = function () {
+        console.log('Button2 Clicked');
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n                <button style=\"color:red\" [style.fontWeight]=\"isBold?'bold':'normal'\">Click Me</button>\n                <br/><br/>\n                <button style=\"color:red\" [style.font-size.px]=\"fontSize\">Click Me</button>\n                <br/><br/>  \n                <button style=\"color:red\" [ngStyle]=\"getStyles()\">Click Me</button> \n            "
+            template: "\n                <button (click)='onClick1()'>Button1</button> \n                <br/>\n                <button on-click='onClick2()'>Button2</button> \n            "
         })
     ], AppComponent);
     return AppComponent;
