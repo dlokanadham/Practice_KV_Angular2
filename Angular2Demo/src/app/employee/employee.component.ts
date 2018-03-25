@@ -11,5 +11,12 @@ export class EmployeeComponenet {
     gender: string = 'Male';
     age: string = '30';
 
-    columnSpan : number =2;
+    columnSpan: number = 2;
+
+    showDetails: boolean =  false;
+
+    onDetailsClick(): void {
+        this.showDetails = !this.showDetails;
+    }
+
 }

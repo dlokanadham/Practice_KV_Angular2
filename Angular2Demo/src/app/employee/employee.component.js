@@ -14,7 +14,11 @@ var EmployeeComponenet = /** @class */ (function () {
         this.gender = 'Male';
         this.age = '30';
         this.columnSpan = 2;
+        this.showDetails = false;
     }
+    EmployeeComponenet.prototype.onDetailsClick = function () {
+        this.showDetails = !this.showDetails;
+    };
     EmployeeComponenet = __decorate([
         core_1.Component({
             selector: 'employee-app',
